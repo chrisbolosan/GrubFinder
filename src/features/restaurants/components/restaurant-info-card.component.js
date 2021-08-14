@@ -94,4 +94,4 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
       </Info>
     </RestaurantCard>
   );
-};
+}
