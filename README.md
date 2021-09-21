@@ -37,9 +37,9 @@ We used the [_--global expo-cli_](https://docs.expo.dev/) boilermaker as the bas
 
 ## Contact:
 
-If you want to contact Chris Bolosan you can reach him at <cbolosan@gmail.com>.
+For more information, you can reach me at <cbolosan@gmail.com>.
 
-Connect with Chris on <a href="www.linkedin.com/in/chrisbolosan">Linkedin</a>
+Connect with me on <a href="www.linkedin.com/in/chrisbolosan">Linkedin</a>
 
 
 
