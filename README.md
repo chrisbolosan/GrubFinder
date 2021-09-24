@@ -22,6 +22,8 @@ __Firebase_ will be used as our DBMS.
 
 **Other Technologies**
 
+__Google Auth 2.0_ will be user for user's login experience.
+
 We used the [_--global expo-cli_](https://docs.expo.dev/) boilermaker as the base of our project and built off of it.
 
 ```
@@ -48,6 +50,8 @@ Connect with me on <a href="www.linkedin.com/in/chrisbolosan">Linkedin</a>
 https://reactnative.dev/docs/environment-setup
 
 https://firebase.google.com/docs/database
+
+https://oauth.net/2/
 
 https://callstack.github.io/react-native-paper/
 
