@@ -12,10 +12,22 @@ return new Promise((resolve, reject) => {
         resolve(mock)
 })
 }
-const restaurantsTransform = (result) => {
-    const newResult = camelize(result)
-    return newResult
-}
+const restaurantsTransform = ({results =[]}) => {
+    const mappedResults = results.map((restaurant) => {
+        return {
+            ...restaurant,
+            isOpenNow: restaurant.opening_hours && restaurant.opening_hours.open_now,
+            isClosedTemporarily: restaurant.business_status === "CLOSED_TEMPORARILY",
+            
+        }
+    });
+    return camelize(mappedResults)
+
+    
+    // const newResult = camelize(results.length)
+  
+}   
+
 restaurantsRequest ()
 .then(restaurantsTransform)
 .then((transformedResponse => {
