@@ -6,6 +6,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { SafeArea } from "./src/utils/safe-area.component.js";
 import { Ionicons } from "@expo/vector-icons";
+
+import { restaurantsRequest } from "./src/services/restaurant/restaurants.service.js";
 //custom fonts
 
 import {
