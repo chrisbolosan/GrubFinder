@@ -2,6 +2,6 @@ import {mocks} from './mock'
 
 
 export const restaurantsRequest = (location ="37.7749295,-122.4194155") => {
-console.log('im restaurant sanfran',mocks)
+console.log(mocks[location])
 }
 restaurantsRequest ()
