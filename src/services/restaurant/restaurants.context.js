@@ -1,4 +1,5 @@
 import React, {useState, createContext, useEffect, useMemo } from "react";
+
 import { RestaurantInfoCard } from "../../features/restaurants/components/restaurant-info-card.component";
 
 import { restaurantsRequest, restaurantsTransform } from "./restaurants.service";
@@ -11,6 +12,7 @@ export const RestaurantsContextProvider = ({children}) => {
 
 const retrieveRestaurants=() => {
     setIsLoading(true);
+
     setTimeout(()=> {
         restaurantsRequest()
         .then(restaurantsTransform)

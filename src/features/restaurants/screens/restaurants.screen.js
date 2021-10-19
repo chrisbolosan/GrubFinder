@@ -4,8 +4,9 @@ import { StatusBar, SafeAreaView, FlatList } from "react-native";
 import styled from "styled-components/native";
 import { Spacer } from "../components/spacer/spacer.component";
 import { RestaurantsContext } from "../../../services/restaurant/restaurants.context";
-
+import { ActivityIndicator, Colors } from 'react-native-paper';
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
+import { View } from "react-native";
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
@@ -31,21 +32,26 @@ const RestaurantList = styled(FlatList).attrs({
 })``;
 export const RestaurantsScreen = () => {
   const {isLoading, error, restaurants} = useContext(RestaurantsContext);
-  // console.log(error)
-  // console.log('imarestaurant',restaurantContext)
   return (
   <SafeArea>
+    {isLoading && (
+      <View style={{ position: 'absolute', top: "50%", left: "50%"}}>
+       <ActivityIndicator size={50}
+       style={{marginLeft: -25}}animating={true} color={Colors.blue800} />
+
+      </View>
+    )}
     <SearchContainer>
       <Searchbar />
     </SearchContainer>
     <RestaurantList
       data={
-        isLoading,
+        isLoading ,
         error,
        restaurants
       }
-      renderItem={({item}) => {(
-        console.log('item', item))
+      renderItem={({item}) => {
+       
         return (
         <Spacer position="bottom" size="large">
           <RestaurantInfoCard  restaurant = {item}/>
