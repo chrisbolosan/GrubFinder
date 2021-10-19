@@ -30,8 +30,8 @@ const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: { padding: 16 },
 })``;
 export const RestaurantsScreen = () => {
-  const restaurantContext = useContext(RestaurantsContext);
-  console.log('imarestaurant',restaurantContext)
+  const {isLoading, error, restaurants} = useContext(RestaurantsContext);
+  // console.log('imarestaurant',restaurantContext)
   return (
   <SafeArea>
     <SearchContainer>
@@ -39,13 +39,18 @@ export const RestaurantsScreen = () => {
     </SearchContainer>
     <RestaurantList
       data={
-        restaurantContext.restaurants
+        isLoading,
+        error,
+       restaurants
       }
-      renderItem={() => (
+      renderItem={({item}) => {(
+        console.log('item', item))
+        return (
         <Spacer position="bottom" size="large">
-          <RestaurantInfoCard />
+          <RestaurantInfoCard  restaurant = {item}/>
         </Spacer>
-      )}
+      )
+      }}
       keyExtractor={(item) => item.name}
     />
   </SafeArea>
