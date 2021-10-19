@@ -6,7 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { SafeArea } from "./src/utils/safe-area.component.js";
 import { Ionicons } from "@expo/vector-icons";
-
+import { RestaurantsContextProvider } from "./src/services/restaurant/restaurants.context.js";
 import { restaurantsRequest } from "./src/services/restaurant/restaurants.service.js";
 //custom fonts
 
@@ -76,6 +76,7 @@ export default function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
+        <RestaurantsContextProvider>
         <NavigationContainer>
           <Tab.Navigator
             screenOptions={createScreenOptions}
@@ -89,6 +90,7 @@ export default function App() {
             <Tab.Screen name="Settings" component={Settings} />
           </Tab.Navigator>
         </NavigationContainer>
+        </RestaurantsContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
     </>
