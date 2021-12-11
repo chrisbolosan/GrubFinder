@@ -10,21 +10,21 @@
 
 GrubFinder will be only availiable on Iphone iOS and Android devices.
 
-## Technology Stack & Tools 
+## Technology Stack & Tools
 
 **Frontend**
 
-_React Native_ was used to manage our applications state.
+_React Native_ was used to manage the applications state.
 
 **Backend**
 
-__Firebase_ will be used as our DBMS. 
+\__Firebase_ will be used as the DBMS.
 
 **Other Technologies**
 
-__Google Auth 2.0_ will be user for user's login experience.
+\__Google Auth 2.0_ will be user for user's login experience.
 
-We used the [_--global expo-cli_](https://docs.expo.dev/) boilermaker as the base of our project and built off of it.
+[_--global expo-cli_](https://docs.expo.dev/) boilermaker was used as the base of the project and built off of it.
 
 ```
   npm install
@@ -33,17 +33,16 @@ We used the [_--global expo-cli_](https://docs.expo.dev/) boilermaker as the bas
 ```
   npm run start
 ```
+
 ## Contributors/Collaborators:
 
-* [Chris Bolosan](https://github.com/chrisbolosan) 📖
+- [Chris Bolosan](https://github.com/chrisbolosan) 📖
 
 ## Contact:
 
 For more information, you can reach me at <cbolosan@gmail.com>.
 
 Connect with me on <a href="www.linkedin.com/in/chrisbolosan">Linkedin</a>
-
-
 
 ## Additional Resources:
 
@@ -58,4 +57,3 @@ https://callstack.github.io/react-native-paper/
 https://developer.apple.com/xcode/
 
 https://developer.android.com/studio
-
