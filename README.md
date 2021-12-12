@@ -1,14 +1,14 @@
 # GrubFinder
 
 <hr />
-<p align='center'>GrubFinder is a mobile app where users can find eateries based on chosen locations and reviews availiable.</p>
+<p align='center'>GrubFinder is a mobile app where users can find and order from eateries based on chosen locations and reviews availiable.</p>
 
 </p>
 <p align='center'><a href="https://www.loom.com/share/5260adb11dc940859fe703a00bf76049"> <img style="max-width:300px" src="https://cdn.loom.com/sessions/thumbnails/5260adb11dc940859fe703a00bf76049-with-play.gif"> </br> <p align='center'> Watch Video</p> </a> </p>
 
 ## Mobile Deployment:
 
-GrubFinder will be only availiable on Iphone iOS and Android devices.
+\_GrubFinder will be only availiable on Iphone iOS and Android devices.
 
 ## Technology Stack & Tools
 
@@ -24,7 +24,9 @@ _React Native_ was used to manage the applications state.
 
 \__Google Auth 2.0_ will be user for user's login experience.
 
-\__Google Maps Platform_(https://developers.google.com/maps/documentation) API's and SDK will be embed to retrieve data from Google Maps.
+\__Google Maps Platform_(https://developers.google.com/maps/documentation) API's and SDK will be embeded to retrieve Maps, Routes, and Places from Google Maps.
+
+\__Stripe_(https://stripe.com/) Payment infrastructure will be availiable enable users to stay within the application when making a safe and secure payment for during their shopping experience.
 
 [_--global expo-cli_](https://docs.expo.dev/) boilermaker was used as the base of the project and built off of it.
 
@@ -49,6 +51,8 @@ Connect with me on <a href="www.linkedin.com/in/chrisbolosan">Linkedin</a>
 ## Additional Resources:
 
 https://developers.google.com/maps/documentation
+
+https://stripe.com/
 
 https://reactnative.dev/docs/environment-setup
 
