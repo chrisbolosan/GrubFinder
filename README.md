@@ -24,6 +24,8 @@ _React Native_ was used to manage the applications state.
 
 \__Google Auth 2.0_ will be user for user's login experience.
 
+\__Google Maps Platform_(https://developers.google.com/maps/documentation) API's and SDK will be embed to retrieve data from Google Maps.
+
 [_--global expo-cli_](https://docs.expo.dev/) boilermaker was used as the base of the project and built off of it.
 
 ```
@@ -45,6 +47,8 @@ For more information, you can reach me at <cbolosan@gmail.com>.
 Connect with me on <a href="www.linkedin.com/in/chrisbolosan">Linkedin</a>
 
 ## Additional Resources:
+
+https://developers.google.com/maps/documentation
 
 https://reactnative.dev/docs/environment-setup
 
