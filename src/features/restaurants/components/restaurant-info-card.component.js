@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from "react";
 import { Text } from "../components/typography/text.component";
 
@@ -32,7 +33,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
   } = restaurant;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
-  // console.log(ratingArray);
+
   return (
     <RestaurantCard elevation={5}>
       <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
@@ -60,4 +61,4 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
       </Info>
     </RestaurantCard>
   );
-}
+};
