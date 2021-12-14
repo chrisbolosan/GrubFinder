@@ -3,40 +3,39 @@ import React, { useState, createContext, useEffect } from "react";
 import { locationRequest, locationTransform } from "./location.service";
 
 export const LocationContext = createContext();
+
 export const LocationContextProvider = ({ children }) => {
-  const [keyword, setKeyword] = useState(null);
-  const [location, setLocation] = useState([]);
+  const [keyword, setKeyword] = useState("san francisco");
+  const [location, setLocation] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = null;
+  const [error, setError] = useState(null);
 
-  const retrieveLocations = () => {
+  const onSearch = (searchKeyword) => {
     setIsLoading(true);
-
-    setTimeout(() => {
-      locationRequest()
-        .then(locationTransform)
-        .then((results) => {
-          setIsLoading(false);
-          setLocation(results);
-        })
-        .catch((error) => {
-          setIsLoading(false);
-          setError(error);
-        });
-    });
+    setKeyword(searchKeyword);
+    locationRequest(keyword)
+      .then(locationTransform)
+      .then((result) => {
+        setIsLoading(false);
+        setLocation(result);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        setError(error);
+      });
   };
 
   useEffect(() => {
-    retrieveLocations(setLocation);
+    onSearch();
   }, []);
 
   return (
     <LocationContext.Provider
       value={{
-        location,
         isLoading,
         error,
-        search: () => null,
+        location,
+        search: onSearch,
         keyword,
       }}
     >
