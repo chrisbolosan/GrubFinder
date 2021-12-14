@@ -7,14 +7,11 @@ import { Spacer } from "../components/spacer/spacer.component";
 import { RestaurantsContext } from "../../../services/restaurant/restaurants.context";
 import { ActivityIndicator, Colors } from "react-native-paper";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
+import { Search } from "../components/search.component";
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
   ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
-`;
-
-const SearchContainer = styled.View`
-  padding: ${(props) => props.theme.space[3]};
 `;
 
 // return (
@@ -47,9 +44,7 @@ export const RestaurantsScreen = () => {
           <Loading size={50} animating={true} color={Colors.blue300} />
         </LoadingContainer>
       )}
-      <SearchContainer>
-        <Searchbar />
-      </SearchContainer>
+      <Search />
       <RestaurantList
         data={(isLoading, error, restaurants)}
         renderItem={({ item }) => {
