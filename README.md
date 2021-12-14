@@ -50,6 +50,9 @@ Connect with me on <a href="www.linkedin.com/in/chrisbolosan">Linkedin</a>
 
 ## Additional Resources:
 
+Searchflow Architecture Figma
+<a href="https://www.figma.com/file/eNp8CLmOwlXdJfB7iCSReM?embed_host=share&kind=&node-id=0%3A1&viewer=1"><img src="assets/GrubfinderSearchArchitecture.webp" alt="My search flow"/>
+
 https://developers.google.com/maps/documentation
 
 https://stripe.com/
