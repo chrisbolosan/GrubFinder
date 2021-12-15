@@ -20,7 +20,6 @@ export const Search = () => {
         }}
         onChangeText={(text) => {
           if (!text.length) {
-            return;
           }
           setSearchKeyword(text);
         }}
