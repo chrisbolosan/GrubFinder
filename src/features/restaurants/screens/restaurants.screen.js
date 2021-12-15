@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { StatusBar, SafeAreaView, FlatList } from "react-native";
+import { StatusBar, SafeAreaView, FlatList, Button } from "react-native";
 import styled from "styled-components/native";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { RestaurantsContext } from "../../../services/restaurant/restaurants.context";
@@ -33,8 +33,9 @@ const LoadingContainer = styled.View`
 const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: { padding: 16 },
 })``;
-export const RestaurantsScreen = () => {
+export const RestaurantsScreen = ({ navigation }) => {
   const { isLoading, error, restaurants } = useContext(RestaurantsContext);
+  console.log("nav", navigation);
   return (
     <SafeArea>
       {isLoading && (
@@ -49,6 +50,10 @@ export const RestaurantsScreen = () => {
           return (
             <Spacer position="bottom" size="large">
               <RestaurantInfoCard restaurant={item} />
+              <Button
+                onPress={() => navigation.navigate("Restaurantdetails")}
+                title="Restaurant details"
+              />
             </Spacer>
           );
         }}
