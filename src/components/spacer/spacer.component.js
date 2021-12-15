@@ -29,4 +29,3 @@ Spacer.defaultProps = {
   position: "top",
   size: "small",
 };
-
