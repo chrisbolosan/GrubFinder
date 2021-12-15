@@ -21,27 +21,31 @@ export const RestaurantsContextProvider = ({ children }) => {
   const [error, setError] = useState(null);
   const { location } = useContext(LocationContext);
 
-  const retrieveRestaurants = () => {
+  const retrieveRestaurants = (loc) => {
     setIsLoading(true);
+    setRestaurants([]);
 
     setTimeout(() => {
-      restaurantsRequest()
+      restaurantsRequest(loc)
         .then(restaurantsTransform)
         .then((results) => {
           setIsLoading(false);
           setRestaurants(results);
         })
-        .catch((error) => {
+        .catch((err) => {
           setIsLoading(false);
-          setError(error);
+          setError(err);
         });
     }, 2000);
   };
   useEffect(() => {
-    const locationString = `${location.lat},${location.lng}`;
-    console.log("imlocstring", locationString);
-    retrieveRestaurants(locationString);
-  }, []);
+    if (location) {
+      console.log("imlocstring", location);
+      const locationString = `${location.lat},${location.lng}`;
+
+      retrieveRestaurants(locationString);
+    }
+  }, [location]);
 
   // console.log('howmany',restaurants)
   return (
