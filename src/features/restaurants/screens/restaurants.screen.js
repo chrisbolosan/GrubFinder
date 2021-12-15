@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, { useContext } from "react";
 import { StatusBar, SafeAreaView, FlatList } from "react-native";
 import styled from "styled-components/native";
