@@ -40,14 +40,12 @@ export const RestaurantsContextProvider = ({ children }) => {
   };
   useEffect(() => {
     if (location) {
-      console.log("imlocstring", location);
       const locationString = `${location.lat},${location.lng}`;
 
       retrieveRestaurants(locationString);
     }
   }, [location]);
 
-  // console.log('howmany',restaurants)
   return (
     <RestaurantsContext.Provider
       value={{
