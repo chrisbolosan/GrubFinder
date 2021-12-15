@@ -7,12 +7,24 @@ const SearchContainer = styled.View`
   padding: ${(props) => props.theme.space[3]};
 `;
 export const Search = () => {
-  const { keyword } = useContext(LocationContext);
+  const { keyword, search } = useContext(LocationContext);
   const [searchKeyword, setSearchKeyword] = useState(keyword);
   //   console.log("searchcontext", locationContext);
   return (
     <SearchContainer>
-      <Searchbar placeholder="Search for a location" value={keyword} />
+      <Searchbar
+        placeholder="Search for a location"
+        value={searchKeyword}
+        onSubmitEditing={() => {
+          search(searchKeyword);
+        }}
+        onChangeText={(text) => {
+          if (!text.length) {
+            return;
+          }
+          setSearchKeyword(text);
+        }}
+      />
     </SearchContainer>
   );
 };
