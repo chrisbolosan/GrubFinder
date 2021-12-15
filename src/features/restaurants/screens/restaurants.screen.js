@@ -1,6 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, { useContext } from "react";
-import { Searchbar } from "react-native-paper";
 import { StatusBar, SafeAreaView, FlatList } from "react-native";
 import styled from "styled-components/native";
 import { Spacer } from "../components/spacer/spacer.component";
