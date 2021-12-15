@@ -31,11 +31,11 @@ _React Native_ was used to manage the applications state.
 [_--global expo-cli_](https://docs.expo.dev/) boilermaker was used as the base of the project and built off of it.
 
 ```
-  npm install
+  yarn install
 ```
 
 ```
-  npm run start
+  yarn run start
 ```
 
 ## Contributors/Collaborators:
