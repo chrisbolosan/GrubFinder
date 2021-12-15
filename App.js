@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components/native";
 import { RestaurantsContextProvider } from "./src/services/restaurant/restaurants.context.js";
 import { LocationContextProvider } from "./src/services/location/location.context.js";
 
-import { AppNavigator } from "./src/infrastructure/navigation/app.navigator.js";
+import { Navigation } from "./src/infrastructure/navigation/index.js";
 //custom fonts
 
 import {
@@ -45,7 +45,7 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <LocationContextProvider>
           <RestaurantsContextProvider>
-            <AppNavigator />
+            <Navigation />
           </RestaurantsContextProvider>
         </LocationContextProvider>
       </ThemeProvider>
