@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { StatusBar, SafeAreaView, FlatList } from "react-native";
 import styled from "styled-components/native";
-import { Spacer } from "../components/spacer/spacer.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
 import { RestaurantsContext } from "../../../services/restaurant/restaurants.context";
 import { ActivityIndicator, Colors } from "react-native-paper";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";

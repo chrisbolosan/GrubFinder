@@ -1,9 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from "react";
-import { Text } from "../components/typography/text.component";
+import { Text } from "../../../components/typography/text.component";
 
 import { SvgXml } from "react-native-svg";
-import { Spacer } from "./spacer/spacer.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
 
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";

@@ -1,6 +1,6 @@
 import React, { useState, createContext, useEffect, useContext } from "react";
 
-import { RestaurantInfoCard } from "../../features/restaurants/components/restaurant-info-card.component";
+// import { RestaurantInfoCard } from "../../features/restaurants/components/restaurant-info-card.component";
 
 import {
   restaurantsRequest,
