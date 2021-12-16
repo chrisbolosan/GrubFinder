@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { StatusBar, SafeAreaView, FlatList, Button } from "react-native";
+import { StatusBar, SafeAreaView, FlatList, Pressable } from "react-native";
 import styled from "styled-components/native";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { RestaurantsContext } from "../../../services/restaurant/restaurants.context";
@@ -48,13 +48,11 @@ export const RestaurantsScreen = ({ navigation }) => {
         data={(isLoading, error, restaurants)}
         renderItem={({ item }) => {
           return (
-            <Spacer position="bottom" size="large">
-              <RestaurantInfoCard restaurant={item} />
-              <Button
-                onPress={() => navigation.navigate("Restaurantdetails")}
-                title="Restaurant details"
-              />
-            </Spacer>
+            <Pressable onPress={() => navigation.navigate("Restaurantdetails")}>
+              <Spacer position="bottom" size="large">
+                <RestaurantInfoCard restaurant={item} />
+              </Spacer>
+            </Pressable>
           );
         }}
         keyExtractor={(item) => item.name}
