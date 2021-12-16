@@ -22,11 +22,11 @@ export const restaurantDetailScreen = ({ route, navigation }) => {
   const { restaurant } = route.params;
   return (
     <SafeArea>
-      {
+      {/* {
         <LoadingContainer>
           <Loading size={50} animating={true} color={Colors.blue300} />
         </LoadingContainer>
-      }
+      } */}
       <RestaurantInfoCard restaurant={restaurant} />
     </SafeArea>
   );
