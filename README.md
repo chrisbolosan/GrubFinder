@@ -51,7 +51,7 @@ Connect with me on <a href="www.linkedin.com/in/chrisbolosan">Linkedin</a>
 ## Additional Resources:
 
 Searchflow Architecture Figma
-<a href="https://www.figma.com/file/eNp8CLmOwlXdJfB7iCSReM?embed_host=share&kind=&node-id=0%3A1&viewer=1"><img src="assets/GrubfinderSearchArchitecture.webp" alt="My search flow"/>
+<a href="https://www.figma.com/proto/eNp8CLmOwlXdJfB7iCSReM/Search-Functionality-Architecture?node-id=13%3A3&scaling=contain&page-id=0%3A1"><img src="assets/SearchNavigationArchitecture.webp" alt="My search flow"/>
 
 https://developers.google.com/maps/documentation
 
