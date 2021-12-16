@@ -14,7 +14,7 @@ export const RestaurantsNavigator = () => {
         component={RestaurantsScreen}
       />
       <RestaurantStack.Screen
-        options={{ headerShown: false }}
+        options={{ headerShown: false, presentation: "modal" }}
         name="Restaurantdetails"
         component={() => <Text>Restaurant Details</Text>}
       />
