@@ -1,5 +1,10 @@
 import React, { useContext } from "react";
-import { StatusBar, SafeAreaView, FlatList } from "react-native";
+import {
+  StatusBar,
+  SafeAreaView,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import styled from "styled-components/native";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { RestaurantsContext } from "../../../services/restaurant/restaurants.context";
@@ -33,8 +38,9 @@ const LoadingContainer = styled.View`
 const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: { padding: 16 },
 })``;
-export const RestaurantsScreen = () => {
+export const RestaurantsScreen = ({ navigation }) => {
   const { isLoading, error, restaurants } = useContext(RestaurantsContext);
+  console.log("nav", navigation);
   return (
     <SafeArea>
       {isLoading && (
@@ -47,9 +53,17 @@ export const RestaurantsScreen = () => {
         data={(isLoading, error, restaurants)}
         renderItem={({ item }) => {
           return (
-            <Spacer position="bottom" size="large">
-              <RestaurantInfoCard restaurant={item} />
-            </Spacer>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate("Restaurantdetails", {
+                  restaurant: item,
+                })
+              }
+            >
+              <Spacer position="bottom" size="large">
+                <RestaurantInfoCard restaurant={item} />
+              </Spacer>
+            </TouchableOpacity>
           );
         }}
         keyExtractor={(item) => item.name}
