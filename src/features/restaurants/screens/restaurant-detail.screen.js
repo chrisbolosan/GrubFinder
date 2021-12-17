@@ -37,45 +37,43 @@ export const restaurantDetailScreen = ({ route, navigation }) => {
       } */}
       <RestaurantInfoCard restaurant={restaurant} />
       <ScrollView>
-        <List.Section>
-          <List.Accordion
-            title="Breakfast"
-            left={(props) => <List.Icon {...props} icon="folder" />}
-            expanded={breakfastExpanded}
-            onPress={() => setBreakfastExpanded(!breakfastExpanded)}
-          >
-            <List.Item title="Crepes" />
-            <List.Item title="Eggs Benedict" />
-          </List.Accordion>
-          <List.Accordion
-            title="Lunch"
-            left={(props) => <List.Icon {...props} icon="folder" />}
-            expanded={lunchExpanded}
-            onPress={() => setLunchExpanded(!lunchExpanded)}
-          >
-            <List.Item title="Chicken Noodle Soup" />
-            <List.Item title="Taco Salad" />
-          </List.Accordion>
-          <List.Accordion
-            title="Dinner"
-            left={(props) => <List.Icon {...props} icon="folder" />}
-            expanded={dinnerExpanded}
-            onPress={() => setDinnerExpanded(!dinnerExpanded)}
-          >
-            <List.Item title="Memphis Smoked Ribs" />
-            <List.Item title="Filet Mignon a la carte" />
-          </List.Accordion>
-          <List.Accordion
-            title="Drinks"
-            left={(props) => <List.Icon {...props} icon="folder" />}
-            expandable={setDinnerExpanded}
-            onPress={() => setDrinksExpanded(!drinksExpanded)}
-          >
-            <List.Item title="Gentleman Jack and Coke" />
-            <List.Item title="Raspberry Lemonade" />
-            <List.Item title="Sparkling Water" />
-          </List.Accordion>
-        </List.Section>
+        <List.Accordion
+          title="Breakfast"
+          left={(props) => <List.Icon {...props} icon="folder" />}
+          expanded={breakfastExpanded}
+          onPress={() => setBreakfastExpanded(!breakfastExpanded)}
+        >
+          <List.Item title="Crepes" />
+          <List.Item title="Eggs Benedict" />
+        </List.Accordion>
+        <List.Accordion
+          title="Lunch"
+          left={(props) => <List.Icon {...props} icon="folder" />}
+          expanded={lunchExpanded}
+          onPress={() => setLunchExpanded(!lunchExpanded)}
+        >
+          <List.Item title="Chicken Noodle Soup" />
+          <List.Item title="Taco Salad" />
+        </List.Accordion>
+        <List.Accordion
+          title="Dinner"
+          left={(props) => <List.Icon {...props} icon="folder" />}
+          expanded={dinnerExpanded}
+          onPress={() => setDinnerExpanded(!dinnerExpanded)}
+        >
+          <List.Item title="Memphis Smoked Ribs" />
+          <List.Item title="Filet Mignon a la carte" />
+        </List.Accordion>
+        <List.Accordion
+          title="Drinks"
+          left={(props) => <List.Icon {...props} icon="folder" />}
+          expandable={setDinnerExpanded}
+          onPress={() => setDrinksExpanded(!drinksExpanded)}
+        >
+          <List.Item title="Gentleman Jack and Coke" />
+          <List.Item title="Raspberry Lemonade" />
+          <List.Item title="Sparkling Water" />
+        </List.Accordion>
       </ScrollView>
     </SafeArea>
   );
