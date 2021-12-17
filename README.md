@@ -4,7 +4,7 @@
 <p align='center'>GrubFinder is a mobile app where users can find and order from eateries based on chosen locations and reviews availiable.</p>
 
 </p>
-<p align='center'><a href="https://www.loom.com/share/5260adb11dc940859fe703a00bf76049"> <img style="max-width:300px" src="https://cdn.loom.com/sessions/thumbnails/5260adb11dc940859fe703a00bf76049-with-play.gif"> </br> <p align='center'> Watch Video</p> </a> </p>
+<p align='center'><a href="https://loom.com/share/6c7cbe92235445b5a546c9eee0786873"> <img style="max-width:300px" src="https://cdn.loom.com/sessions/thumbnails/6c7cbe92235445b5a546c9eee0786873-with-play.gif"> </br> <p align='center'> Watch Video</p> </a> </p>
 
 ## Mobile Deployment:
 
