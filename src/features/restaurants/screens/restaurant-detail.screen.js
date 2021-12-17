@@ -39,7 +39,7 @@ export const restaurantDetailScreen = ({ route, navigation }) => {
       <ScrollView>
         <List.Accordion
           title="Breakfast"
-          left={(props) => <List.Icon {...props} icon="folder" />}
+          left={(props) => <List.Icon {...props} icon="food-croissant" />}
           expanded={breakfastExpanded}
           onPress={() => setBreakfastExpanded(!breakfastExpanded)}
         >
@@ -48,16 +48,16 @@ export const restaurantDetailScreen = ({ route, navigation }) => {
         </List.Accordion>
         <List.Accordion
           title="Lunch"
-          left={(props) => <List.Icon {...props} icon="folder" />}
+          left={(props) => <List.Icon {...props} icon="hamburger" />}
           expanded={lunchExpanded}
           onPress={() => setLunchExpanded(!lunchExpanded)}
         >
-          <List.Item title="Chicken Noodle Soup" />
+          <List.Item title="Burger" />
           <List.Item title="Taco Salad" />
         </List.Accordion>
         <List.Accordion
           title="Dinner"
-          left={(props) => <List.Icon {...props} icon="folder" />}
+          left={(props) => <List.Icon {...props} icon="food-variant" />}
           expanded={dinnerExpanded}
           onPress={() => setDinnerExpanded(!dinnerExpanded)}
         >
@@ -66,7 +66,7 @@ export const restaurantDetailScreen = ({ route, navigation }) => {
         </List.Accordion>
         <List.Accordion
           title="Drinks"
-          left={(props) => <List.Icon {...props} icon="folder" />}
+          left={(props) => <List.Icon {...props} icon="glass-cocktail" />}
           expandable={setDinnerExpanded}
           onPress={() => setDrinksExpanded(!drinksExpanded)}
         >
