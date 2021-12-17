@@ -21,8 +21,11 @@ const LoadingContainer = styled.View`
 export const restaurantDetailScreen = ({ route, navigation }) => {
   const { restaurant } = route.params;
   const [breakfastExpanded, setBreakfastExpanded] = useState(false);
+  const [lunchExpanded, setLunchExpanded] = useState(false);
+  const [dinnerExpanded, setDinnerExpanded] = useState(false);
+  const [drinksExpanded, setDrinksExpanded] = useState(false);
 
-  const handlePress = () => setBreakfastExpanded(!breakfastExpanded);
+  // const handlePress = () => ;
 
   return (
     <SafeArea>
@@ -36,7 +39,7 @@ export const restaurantDetailScreen = ({ route, navigation }) => {
         title="Breakfast"
         left={(props) => <List.Icon {...props} icon="folder" />}
         expanded={breakfastExpanded}
-        onPress={handlePress}
+        onPress={() => setBreakfastExpanded(!breakfastExpanded)}
       >
         <List.Item title="Crepes" />
         <List.Item title="Eggs Benedict" />
