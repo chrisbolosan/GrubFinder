@@ -44,6 +44,15 @@ export const restaurantDetailScreen = ({ route, navigation }) => {
         <List.Item title="Crepes" />
         <List.Item title="Eggs Benedict" />
       </List.Accordion>
+      <List.Accordion
+        title="Lunch"
+        left={(props) => <List.Icon {...props} icon="folder" />}
+        expanded={lunchExpanded}
+        onPress={() => setLunchExpanded(!lunchExpanded)}
+      >
+        <List.Item title="Chicken Noodle Soup" />
+        <List.Item title="Taco Salad" />
+      </List.Accordion>
     </SafeArea>
   );
 };
