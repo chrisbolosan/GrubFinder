@@ -48,10 +48,15 @@ For more information, you can reach me at <cbolosan@gmail.com>.
 
 Connect with me on <a href="www.linkedin.com/in/chrisbolosan">Linkedin</a>
 
-## Additional Resources:
+## Figma Architectures:
 
-Searchflow Architecture Figma
+Searchflow
 <a href="https://www.figma.com/proto/eNp8CLmOwlXdJfB7iCSReM/Search-Functionality-Architecture?node-id=13%3A3&scaling=contain&page-id=0%3A1"><img src="assets/SearchNavigationArchitecture.webp" alt="My search flow"/>
+
+UX Restaurants/Restaurant Services
+<a href="https://figma.com/proto/SSYi9VtzOXjr1DjqU62FaH/User-Restaurant-Navigation?node-id=13%3A3&scaling=contain&page-id=0%3A1"><img src="assets/UXRestaurants.webp" alt="UX Restaurants"/>
+
+## Additional Resources:
 
 https://developers.google.com/maps/documentation
 
