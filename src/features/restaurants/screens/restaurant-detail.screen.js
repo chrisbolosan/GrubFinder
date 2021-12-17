@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { SafeAreaView, StatusBar, Text } from "react-native";
 import styled from "styled-components/native";
-import { ActivityIndicator, Colors } from "react-native-paper";
+import { ActivityIndicator, Colors, List } from "react-native-paper";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 
 const SafeArea = styled(SafeAreaView)`
@@ -20,6 +20,10 @@ const LoadingContainer = styled.View`
 
 export const restaurantDetailScreen = ({ route, navigation }) => {
   const { restaurant } = route.params;
+  const [breakfastExpanded, setBreakfastExpanded] = useState(false);
+
+  const handlePress = () => setBreakfastExpanded(!breakfastExpanded);
+
   return (
     <SafeArea>
       {/* {
@@ -28,6 +32,15 @@ export const restaurantDetailScreen = ({ route, navigation }) => {
         </LoadingContainer>
       } */}
       <RestaurantInfoCard restaurant={restaurant} />
+      <List.Accordion
+        title="Breakfast"
+        left={(props) => <List.Icon {...props} icon="folder" />}
+        expanded={breakfastExpanded}
+        onPress={handlePress}
+      >
+        <List.Item title="Crepes" />
+        <List.Item title="Eggs Benedict" />
+      </List.Accordion>
     </SafeArea>
   );
 };
