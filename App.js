@@ -7,14 +7,13 @@ import { RestaurantsContextProvider } from "./src/services/restaurant/restaurant
 import { LocationContextProvider } from "./src/services/location/location.context.js";
 
 import { Navigation } from "./src/infrastructure/navigation/index.js";
-//custom fonts
 
 import {
   useFonts as useOswald,
   Oswald_400Regular,
 } from "@expo-google-fonts/oswald";
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
-//my infrastructure
+
 import { theme } from "./src/infrastructure/theme";
 
 // const tabBarIcon = (iconName) => ({size,color}) => (
@@ -36,7 +35,7 @@ export default function App() {
   const [latoLoaded] = useLato({
     Lato_400Regular,
   });
-  //if neither fonts load
+
   if (!oswaldLoaded || !latoLoaded) {
     return null;
   }
