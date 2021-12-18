@@ -24,14 +24,6 @@ function Settings() {
   );
 }
 
-function Map() {
-  return (
-    <SafeArea>
-      <Text>map</Text>
-    </SafeArea>
-  );
-}
-
 const createScreenOptions = ({ route }) => {
   const iconName = TAB_ICON[route.name];
   return {

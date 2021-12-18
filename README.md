@@ -8,7 +8,7 @@
 
 ## Mobile Deployment:
 
-\_GrubFinder will be only availiable on Iphone iOS devices.
+\_GrubFinder is currently availiable for testing on Iphone iOS and Android devices.
 
 ## Technology Stack & Tools
 
