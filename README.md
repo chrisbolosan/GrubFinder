@@ -60,6 +60,8 @@ UX Restaurants/Restaurant Services
 
 https://developers.google.com/maps/documentation
 
+https://github.com/react-native-maps/react-native-maps
+
 https://stripe.com/
 
 https://reactnative.dev/docs/environment-setup
