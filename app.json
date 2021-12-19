@@ -1,21 +1,19 @@
 {
   "expo": {
-    "name": "MealsToGo",
-    "slug": "MealsToGo",
+    "name": "GrubFinder",
+    "slug": "GrubFinder",
     "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/grublogoloading.gif",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
