@@ -17,16 +17,6 @@ const SafeArea = styled(SafeAreaView)`
   ${StatusBar.currentHeight && `margin-top: ${StatusBar.currentHeight}px`};
 `;
 
-// return (
-//   <SafeAreaView style={styles.container}>
-//     <FlatList
-//       data={DATA}
-//       renderItem={renderItem}
-//       keyExtractor={item => item.id}
-//     />
-//   </SafeAreaView>
-// );
-
 const Loading = styled(ActivityIndicator)`
   margin-left: -25px;
 `;
