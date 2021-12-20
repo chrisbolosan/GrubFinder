@@ -28,7 +28,7 @@ export const restaurantsTransform = ({ results = [] }) => {
 restaurantsRequest()
   .then(restaurantsTransform)
   .then((transformedResponse) => {
-    console.log(transformedResponse);
+    // console.log(transformedResponse);
   })
 
   .catch((error) => {

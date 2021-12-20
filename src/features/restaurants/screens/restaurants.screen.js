@@ -30,7 +30,7 @@ const RestaurantList = styled(FlatList).attrs({
 })``;
 export const RestaurantsScreen = ({ navigation }) => {
   const { isLoading, error, restaurants } = useContext(RestaurantsContext);
-  console.log("nav", navigation);
+  // console.log("nav", navigation);
   return (
     <SafeArea>
       {isLoading && (
