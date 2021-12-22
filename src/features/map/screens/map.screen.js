@@ -55,7 +55,7 @@ export const MapScreen = () => {
         }}
       >
         {restaurants.map((restaurant) => {
-          console.log("eat", restaurant);
+          //   console.log("eat", restaurant);
           return (
             <MapView.Marker
               key={restaurant.name}
@@ -66,10 +66,8 @@ export const MapScreen = () => {
               }}
             >
               <MapView.Callout>
-                <FoodImage source={{ uri: restaurant.photos[0] }} />
-                <CustomCallout restaurant={restaurant.name}>
-                  {restaurant}
-                </CustomCallout>
+                {/* <FoodImage source={{ uri: restaurant.photos[0] }} /> */}
+                <CustomCallout restaurant={restaurant} />
               </MapView.Callout>
             </MapView.Marker>
           );
