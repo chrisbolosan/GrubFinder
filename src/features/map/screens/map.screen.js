@@ -11,6 +11,11 @@ const Map = styled(MapView)`
   height: 100%;
   width: 100%;
 `;
+const IconImage = styled.Image`
+  border-radius: 10px;
+  height: 150px;
+  width: 150px;
+`;
 
 export const MapScreen = () => {
   const { location } = useContext(LocationContext);
@@ -38,6 +43,7 @@ export const MapScreen = () => {
         }}
       >
         {restaurants.map((restaurant) => {
+          console.log("eat", restaurant);
           return (
             <MapView.Marker
               key={restaurant.name}
@@ -48,7 +54,10 @@ export const MapScreen = () => {
               }}
             >
               <MapView.Callout>
-                <CustomCallout restaurant={restaurant.name} />
+                <IconImage source={{ uri: restaurant.photos[0] }} />
+                <CustomCallout restaurant={restaurant.name}>
+                  {restaurant}
+                </CustomCallout>
               </MapView.Callout>
             </MapView.Marker>
           );
