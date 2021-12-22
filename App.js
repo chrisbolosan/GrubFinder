@@ -10,6 +10,7 @@ import {
 } from "@expo-google-fonts/oswald";
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import { theme } from "./src/infrastructure/theme";
+import { FavouritesContextProvider } from "./src/services/favourites/favourites.context.js";
 
 export default function App() {
   const [oswaldLoaded] = useOswald({
@@ -27,7 +28,9 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <LocationContextProvider>
           <RestaurantsContextProvider>
-            <Navigation />
+            <FavouritesContextProvider>
+              <Navigation />
+            </FavouritesContextProvider>
           </RestaurantsContextProvider>
         </LocationContextProvider>
       </ThemeProvider>
