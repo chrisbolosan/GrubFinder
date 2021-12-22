@@ -5,6 +5,7 @@
 
 </p>
 <p align='center'><a href="https://loom.com/share/6c7cbe92235445b5a546c9eee0786873"> <img style="max-width:300px" src="https://cdn.loom.com/sessions/thumbnails/6c7cbe92235445b5a546c9eee0786873-with-play.gif"> </br> <p align='center'> Watch Video</p> </a> </p>
+<p align='center'><a href="https://www.loom.com/share/c8a43480c4dc420a9335a9cfe62a4ea9"> <img style="max-width:300px" src="https://cdn.loom.com/sessions/thumbnails/c8a43480c4dc420a9335a9cfe62a4ea9-with-play.gif"> </br> <p align='center'> Watch Map Video</p> </a> </p>
 
 ## Mobile Deployment:
 
