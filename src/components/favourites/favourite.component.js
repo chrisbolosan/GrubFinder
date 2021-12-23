@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import styled from "styled-components/native";
 import { Entypo } from "@expo/vector-icons";
 import { TouchableOpacity } from "react-native";
-// import { IconButton } from "react-native-paper";
 import { FavouritesContext } from "../../services/favourites/favourites.context";
 
 const FavouriteButton = styled(TouchableOpacity)`
