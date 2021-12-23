@@ -38,7 +38,6 @@ export const MapScreen = ({ navigation }) => {
         }}
       >
         {restaurants.map((restaurant) => {
-          //   console.log("eat", restaurant);
           return (
             <MapView.Marker
               key={restaurant.name}
