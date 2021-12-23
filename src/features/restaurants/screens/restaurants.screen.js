@@ -8,12 +8,11 @@ import {
 import styled from "styled-components/native";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { RestaurantsContext } from "../../../services/restaurant/restaurants.context";
-
+import { FavouritesContext } from "../../../services/favourites/favourites.context";
 import { ActivityIndicator, Colors } from "react-native-paper";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 import { Search } from "../components/search.component";
 import { FavouritesBar } from "../../../components/favourites/favourites-bar.component";
-import { Favourite } from "../../../components/favourites/favourite.component";
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
@@ -34,6 +33,7 @@ const RestaurantList = styled(FlatList).attrs({
 
 export const RestaurantsScreen = ({ navigation }) => {
   const { isLoading, error, restaurants } = useContext(RestaurantsContext);
+  const { favourites } = useContext(FavouritesContext);
   const [isToggled, setIsToggled] = useState(false);
   return (
     <SafeArea>
@@ -46,7 +46,7 @@ export const RestaurantsScreen = ({ navigation }) => {
         isFavouritesToggled={isToggled}
         onFavouritesToggle={() => setIsToggled(!isToggled)}
       />
-      {isToggled && <FavouritesBar />}
+      {isToggled && <FavouritesBar favourites={favourites} />}
       <RestaurantList
         data={(isLoading, error, restaurants)}
         renderItem={({ item }) => {

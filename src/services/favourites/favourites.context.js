@@ -16,7 +16,7 @@ export const FavouritesContextProvider = ({ children }) => {
     );
     setFavourites(newFavourites);
   };
-
+  // console.log("what am i $$$$$$$$$$", favourites);
   return (
     <FavouritesContext.Provider
       value={{
