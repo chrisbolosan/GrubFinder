@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { SafeAreaView, StatusBar, Text } from "react-native";
+import { SafeAreaView, StatusBar } from "react-native";
 import styled from "styled-components/native";
 import { ScrollView } from "react-native-gesture-handler";
-import { ActivityIndicator, Colors, List } from "react-native-paper";
+import { ActivityIndicator, List } from "react-native-paper";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 
 const SafeArea = styled(SafeAreaView)`
@@ -26,15 +26,8 @@ export const restaurantDetailScreen = ({ route, navigation }) => {
   const [dinnerExpanded, setDinnerExpanded] = useState(false);
   const [drinksExpanded, setDrinksExpanded] = useState(false);
 
-  // const handlePress = () => ;
-
   return (
     <SafeArea>
-      {/* {
-        <LoadingContainer>
-          <Loading size={50} animating={true} color={Colors.blue300} />
-        </LoadingContainer>
-      } */}
       <RestaurantInfoCard restaurant={restaurant} />
       <ScrollView>
         <List.Accordion
