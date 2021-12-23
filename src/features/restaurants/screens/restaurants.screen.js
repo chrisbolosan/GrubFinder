@@ -12,6 +12,7 @@ import { RestaurantsContext } from "../../../services/restaurant/restaurants.con
 import { ActivityIndicator, Colors } from "react-native-paper";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 import { Search } from "../components/search.component";
+import { FavouritesBar } from "../../../components/favourites/favourites-bar.component";
 import { Favourite } from "../../../components/favourites/favourite.component";
 
 const SafeArea = styled(SafeAreaView)`
@@ -45,7 +46,7 @@ export const RestaurantsScreen = ({ navigation }) => {
         isFavouritesToggled={isToggled}
         onFavouritesToggle={() => setIsToggled(!isToggled)}
       />
-
+      {isToggled && <FavouritesBar />}
       <RestaurantList
         data={(isLoading, error, restaurants)}
         renderItem={({ item }) => {
