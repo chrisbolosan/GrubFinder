@@ -8,9 +8,11 @@ import {
 import styled from "styled-components/native";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { RestaurantsContext } from "../../../services/restaurant/restaurants.context";
+
 import { ActivityIndicator, Colors } from "react-native-paper";
 import { RestaurantInfoCard } from "../components/restaurant-info-card.component";
 import { Search } from "../components/search.component";
+import { Favourite } from "../../../components/favourites/favourite.component";
 
 const SafeArea = styled(SafeAreaView)`
   flex: 1;
@@ -28,9 +30,10 @@ const LoadingContainer = styled.View`
 const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: { padding: 16 },
 })``;
+
 export const RestaurantsScreen = ({ navigation }) => {
   const { isLoading, error, restaurants } = useContext(RestaurantsContext);
-  // console.log("nav", navigation);
+
   return (
     <SafeArea>
       {isLoading && (
@@ -39,6 +42,7 @@ export const RestaurantsScreen = ({ navigation }) => {
         </LoadingContainer>
       )}
       <Search />
+
       <RestaurantList
         data={(isLoading, error, restaurants)}
         renderItem={({ item }) => {
