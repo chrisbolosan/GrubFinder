@@ -35,6 +35,7 @@ export const RestaurantsScreen = ({ navigation }) => {
   const { isLoading, error, restaurants } = useContext(RestaurantsContext);
   const { favourites } = useContext(FavouritesContext);
   const [isToggled, setIsToggled] = useState(false);
+
   return (
     <SafeArea>
       {isLoading && (
@@ -46,7 +47,12 @@ export const RestaurantsScreen = ({ navigation }) => {
         isFavouritesToggled={isToggled}
         onFavouritesToggle={() => setIsToggled(!isToggled)}
       />
-      {isToggled && <FavouritesBar favourites={favourites} />}
+      {isToggled && (
+        <FavouritesBar
+          onNavigate={navigation.navigate}
+          favourites={favourites}
+        />
+      )}
       <RestaurantList
         data={(isLoading, error, restaurants)}
         renderItem={({ item }) => {
