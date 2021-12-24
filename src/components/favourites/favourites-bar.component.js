@@ -1,17 +1,15 @@
 import React from "react";
-import { TouchableOpacity } from "react-native";
+import { ScrollView, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
-import { ScrollView } from "react-native-gesture-handler";
 import { Spacer } from "../spacer/spacer.component";
 import { CompressRestaurantInfo } from "../restaurant/compress-restaurant-info.component";
 import { Text } from "../typography/text.component";
 
 const FavouritesWrapper = styled.View`
   padding: 10px;
-  border-radius: 5px;
 `;
 export const FavouritesBar = ({ favourites, onNavigate }) => {
-  if (favourites.length === 0) {
+  if (!favourites.length) {
     return null;
   }
   return (
@@ -24,17 +22,17 @@ export const FavouritesBar = ({ favourites, onNavigate }) => {
         {favourites.map((restaurant) => {
           const key = restaurant.name;
           return (
-            <TouchableOpacity
-              onPress={() => {
-                onNavigate("Restaurantdetails", {
-                  restaurant,
-                });
-              }}
-            >
-              <Spacer key={key} position="left" size="medium">
+            <Spacer key={key} position="left" size="medium">
+              <TouchableOpacity
+                onPress={() =>
+                  onNavigate("Restaurantdetails", {
+                    restaurant,
+                  })
+                }
+              >
                 <CompressRestaurantInfo restaurant={restaurant} />
-              </Spacer>
-            </TouchableOpacity>
+              </TouchableOpacity>
+            </Spacer>
           );
         })}
       </ScrollView>
