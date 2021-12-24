@@ -24,8 +24,8 @@ const AndroidImage = styled(WebView)`
 
 const isAndroid = Platform.OS === "android";
 
-export const CompressRestaurantInfo = ({ restaurant }) => {
-  const Image = isAndroid ? AndroidImage : IconImage;
+export const CompressRestaurantInfo = ({ restaurant, isMap }) => {
+  const Image = isAndroid && isMap ? AndroidImage : IconImage;
   return (
     <MarkerCard>
       <Image source={{ uri: restaurant.photos[0] }} />
