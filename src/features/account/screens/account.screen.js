@@ -1,25 +1,31 @@
 import React from "react";
 import { Text } from "react-native";
-import styled from "styled-components";
-import { fontWeights } from "../../../infrastructure/theme/fonts";
+
+import { AuthButton } from "../components/account.styles";
 import {
   AccountBackground,
   AccountContainer,
   AccountCover,
+  AppName,
 } from "../components/account.styles";
 
-const chrisfood = styled.Text`
-  color: rgba(255, 255, 255);
-`;
 export const AccountScreen = () => {
   return (
     <>
       <AccountBackground>
-        <Text style={{ color: "white", fontWeight: "bold", fontSize: "25px" }}>
+        <AppName style={{ color: "white", fontWeight: "bold", fontSize: 25 }}>
           GrubFinder
-        </Text>
-        <AccountContainer />
+        </AppName>
         <AccountCover />
+        <AccountContainer>
+          <AuthButton
+            icon="lock-open-outline"
+            mode="contained"
+            onPress={() => console.log("Pressed")}
+          >
+            Login
+          </AuthButton>
+        </AccountContainer>
       </AccountBackground>
     </>
   );
