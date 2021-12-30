@@ -35,4 +35,6 @@ export const AppName = styled(Text).attrs({
   color: "white",
   fontWeight: "bold",
   fontSize: 25,
-})``;
+})`
+  margin-top: ${(props) => props.theme.space[5]};
+`;
