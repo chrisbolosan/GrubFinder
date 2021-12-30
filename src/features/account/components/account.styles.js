@@ -1,11 +1,10 @@
 import styled from "styled-components/native";
 import { colors } from "../../../infrastructure/theme/colors";
-import { Button } from "react-native-paper";
+import { Button, TextInput } from "react-native-paper";
 import { Text } from "react-native";
 
 export const AccountBackground = styled.ImageBackground.attrs({
   source: require("../../../../assets/foodbackground3.jpeg"),
-  //   resizeMode: "contain",
 })`
   flex: 1;
   align-items: center;
@@ -37,4 +36,8 @@ export const AppName = styled(Text).attrs({
   fontSize: 25,
 })`
   margin-top: ${(props) => props.theme.space[5]};
+`;
+
+export const AuthInput = styled(TextInput).attrs({})`
+  width: 250px;
 `;
