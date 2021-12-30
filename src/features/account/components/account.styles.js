@@ -29,7 +29,7 @@ export const AccountContainer = styled.View`
 export const AuthButton = styled(Button).attrs({
   color: colors.brand.primary,
 })`
-  padding: ${(props) => props.theme.space[2]};
+  padding: ${(props) => props.theme.space[1]};
 `;
 export const AppName = styled(Text).attrs({
   color: "white",
