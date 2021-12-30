@@ -38,6 +38,11 @@ export const AppName = styled(Text).attrs({
   margin-top: ${(props) => props.theme.space[5]};
 `;
 
-export const AuthInput = styled(TextInput).attrs({})`
+export const AuthInput = styled(TextInput)`
   width: 250px;
+`;
+
+export const ErrorContainer = styled.View`
+  max-width: 300px;
+  align-items: center;
 `;

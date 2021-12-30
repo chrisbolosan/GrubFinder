@@ -9,6 +9,7 @@ import {
   AccountCover,
   AuthButton,
   AuthInput,
+  ErrorContainer,
 } from "../components/account.styles";
 
 export const LoginScreen = ({ navigation: { goBack } }) => {
@@ -41,9 +42,9 @@ export const LoginScreen = ({ navigation: { goBack } }) => {
             />
           </Spacer>
           {error && (
-            <Spacer size="large">
+            <ErrorContainer>
               <Text variant="error">{error}</Text>
-            </Spacer>
+            </ErrorContainer>
           )}
           <Spacer size="large">
             <AuthButton
