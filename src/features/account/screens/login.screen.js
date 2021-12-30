@@ -11,7 +11,7 @@ import {
   AuthInput,
 } from "../components/account.styles";
 
-export const LoginScreen = (props) => {
+export const LoginScreen = ({ navigation: { goBack } }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { onLogin, error } = useContext(AuthenticationContext);
@@ -55,6 +55,11 @@ export const LoginScreen = (props) => {
             </AuthButton>
           </Spacer>
         </AccountContainer>
+        <Spacer size="large">
+          <AuthButton mode="contained" onPress={() => goBack()}>
+            Back
+          </AuthButton>
+        </Spacer>
       </AccountBackground>
     </>
   );

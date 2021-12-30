@@ -25,9 +25,7 @@ export const AuthenticationContextProvider = ({ children }) => {
         if (issue === "auth/invalid-email") {
           setError("Invalid Email");
         } else if (issue === "auth/invalid-password") {
-          {
-            setError("Invalid Password");
-          }
+          setError("Invalid Password");
         }
       });
   };
