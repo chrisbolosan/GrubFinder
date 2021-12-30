@@ -8,6 +8,7 @@ export const AuthenticationContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [message, setMessage] = useState("");
 
   const onLogin = (email, password) => {
     setIsLoading(true);
@@ -17,9 +18,17 @@ export const AuthenticationContextProvider = ({ children }) => {
         setIsLoading(false);
         console.log("###user#####", u);
       })
+
       .catch((e) => {
         setIsLoading(false);
-        setError(e);
+        const issue = e.code.toString();
+        if (issue === "auth/invalid-email") {
+          setError("Invalid Email");
+        } else if (issue === "auth/invalid-password") {
+          {
+            setError("Invalid Password");
+          }
+        }
       });
   };
   return (

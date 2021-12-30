@@ -15,6 +15,7 @@ export const LoginScreen = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { onLogin, error } = useContext(AuthenticationContext);
+  console.log("$$$error", error);
   return (
     <>
       <AccountBackground>
