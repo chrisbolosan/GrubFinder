@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
-
+import { ActivityIndicator, Colors } from "react-native-paper";
 import {
   AccountBackground,
   AccountContainer,
@@ -15,7 +15,7 @@ import {
 export const LoginScreen = ({ navigation: { goBack } }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { onLogin, error } = useContext(AuthenticationContext);
+  const { onLogin, isLoading, error } = useContext(AuthenticationContext);
 
   return (
     <>
@@ -56,9 +56,17 @@ export const LoginScreen = ({ navigation: { goBack } }) => {
           </Spacer>
         </AccountContainer>
         <Spacer size="large">
-          <AuthButton mode="contained" onPress={() => goBack()}>
-            Back
-          </AuthButton>
+          {isLoading ? (
+            <ActivityIndicator
+              size={50}
+              animating={true}
+              color={Colors.blue300}
+            />
+          ) : (
+            <AuthButton mode="contained" onPress={() => goBack()}>
+              Back
+            </AuthButton>
+          )}
         </Spacer>
       </AccountBackground>
     </>
