@@ -6,7 +6,6 @@ import { AppNavigator } from "./app.navigator";
 
 export const Navigation = () => {
   const { isAuthenticated } = useContext(AuthenticationContext);
-  console.log("###isauth?#####", isAuthenticated);
   return (
     <NavigationContainer>
       {isAuthenticated ? <AppNavigator /> : <AccountNavigator />}

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
-import { loginRequest } from "../../../services/authentication/authentication.service";
+
 import {
   AccountBackground,
   AccountContainer,
@@ -16,7 +16,7 @@ export const LoginScreen = ({ navigation: { goBack } }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { onLogin, error } = useContext(AuthenticationContext);
-  console.log("$$$error", error);
+
   return (
     <>
       <AccountBackground>
@@ -38,7 +38,6 @@ export const LoginScreen = ({ navigation: { goBack } }) => {
               textContentType="password"
               autoCapitalize="none"
               secureTextEntry
-              secure
             />
           </Spacer>
           {error && (
