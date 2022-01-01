@@ -33,12 +33,6 @@ export const AuthenticationContextProvider = ({ children }) => {
       .catch((e) => {
         setIsLoading(false);
         setError(e.code.slice(5).toUpperCase());
-        // const issue = e.code.toString();
-        // if (issue === "auth/invalid-email") {
-        //   setError("Invalid Email");
-        // } else if (issue === "auth/invalid-password") {
-        //   setError("Invalid Password");
-        // }
       });
   };
 
