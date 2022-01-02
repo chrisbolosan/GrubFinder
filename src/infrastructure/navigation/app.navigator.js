@@ -1,12 +1,15 @@
-import React from "react";
-import { Text } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import React, { useContext } from "react";
+import { Text, Button } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
 import { SafeArea } from "../../components/utils/safe-area.component";
 import { RestaurantsNavigator } from "../../infrastructure/navigation/restaurants.navigator";
 import { MapScreen } from "../../features/map/screens/map.screen";
+import { AuthenticationContext } from "../../services/authentication/authentication.context";
+import { FavouritesContextProvider } from "../../services/favourites/favourites.context";
+import { LocationContextProvider } from "../../services/location/location.context";
+import { RestaurantsContextProvider } from "../../services/restaurant/restaurants.context";
 
 const Tab = createBottomTabNavigator();
 
@@ -17,9 +20,13 @@ const TAB_ICON = {
 };
 
 function Settings() {
+  const { onLogout } = useContext(AuthenticationContext);
   return (
     <SafeArea>
       <Text>Settings!</Text>
+      <Button title="logout" onPress={() => onLogout()}>
+        Logout
+      </Button>
     </SafeArea>
   );
 }
@@ -35,28 +42,32 @@ const createScreenOptions = ({ route }) => {
 
 export const AppNavigator = () => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={createScreenOptions}
-        tabBarActiveTintColor={"tomato"}
-        tabBarInactiveTintColor={"gray"}
-      >
-        <Tab.Screen
-          options={{ headerShown: false }}
-          name="Restaurants"
-          component={RestaurantsNavigator}
-        />
-        <Tab.Screen
-          options={{ headerShown: false }}
-          name="Map"
-          component={MapScreen}
-        />
-        <Tab.Screen
-          options={{ headerShown: false }}
-          name="Settings"
-          component={Settings}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <FavouritesContextProvider>
+      <LocationContextProvider>
+        <RestaurantsContextProvider>
+          <Tab.Navigator
+            screenOptions={createScreenOptions}
+            tabBarActiveTintColor={"tomato"}
+            tabBarInactiveTintColor={"gray"}
+          >
+            <Tab.Screen
+              options={{ headerShown: false }}
+              name="Restaurants"
+              component={RestaurantsNavigator}
+            />
+            <Tab.Screen
+              options={{ headerShown: false }}
+              name="Map"
+              component={MapScreen}
+            />
+            <Tab.Screen
+              options={{ headerShown: false }}
+              name="Settings"
+              component={Settings}
+            />
+          </Tab.Navigator>
+        </RestaurantsContextProvider>
+      </LocationContextProvider>
+    </FavouritesContextProvider>
   );
 };
