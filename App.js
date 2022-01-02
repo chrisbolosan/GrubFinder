@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { StatusBar as ExpoStatusBar } from "expo-status-bar";
 import { ThemeProvider } from "styled-components/native";
-import { RestaurantsContextProvider } from "./src/services/restaurant/restaurants.context.js";
-import { LocationContextProvider } from "./src/services/location/location.context.js";
 import { AuthenticationContextProvider } from "./src/services/authentication/authentication.context.js";
 import { Navigation } from "./src/infrastructure/navigation/index.js";
 import firebase from "firebase/compat/app";
@@ -16,7 +14,6 @@ import {
 } from "@expo-google-fonts/oswald";
 import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import { theme } from "./src/infrastructure/theme";
-import { FavouritesContextProvider } from "./src/services/favourites/favourites.context.js";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -38,13 +35,7 @@ export default function App() {
     <>
       <ThemeProvider theme={theme}>
         <AuthenticationContextProvider>
-          <FavouritesContextProvider>
-            <LocationContextProvider>
-              <RestaurantsContextProvider>
-                <Navigation />
-              </RestaurantsContextProvider>
-            </LocationContextProvider>
-          </FavouritesContextProvider>
+          <Navigation />
         </AuthenticationContextProvider>
       </ThemeProvider>
       <ExpoStatusBar style="auto" />
