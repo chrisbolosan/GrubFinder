@@ -1,5 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from "react";
+import LottieView from "lottie-react-native";
 import { Text } from "react-native";
 import { Spacer } from "../../../components/spacer/spacer.component";
 
@@ -15,6 +16,14 @@ export const AccountScreen = ({ navigation }) => {
   return (
     <>
       <AccountBackground>
+        {/* <LottieView
+          key="animation"
+          autoPlay
+          loop
+          resizeMode="cover"
+          source={require("../../../../assets/grublogo.json")}
+        /> */}
+
         <AppName
           style={{
             color: "white",
