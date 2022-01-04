@@ -13,10 +13,14 @@ export const RestaurantsNavigator = () => {
     <RestaurantStack.Navigator
       screenOptions={{
         ...TransitionPresets.ModalTransition,
+        gestureEnabled: true,
+        gestureDirection: "vertical",
       }}
     >
       <RestaurantStack.Screen
-        options={{ headerShown: false }}
+        options={{
+          headerShown: false,
+        }}
         name="Restaurant"
         component={RestaurantsScreen}
       />
