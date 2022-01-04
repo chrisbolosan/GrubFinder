@@ -1,6 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from "react";
-import { Text } from "react-native";
 import { Spacer } from "../../../components/spacer/spacer.component";
 
 import { AuthButton } from "../components/account.styles";
