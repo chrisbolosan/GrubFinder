@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-// import { View, Text } from "react-native";
 import MapView from "react-native-maps";
 import styled from "styled-components/native";
 import { LocationContext } from "../../../services/location/location.context";
