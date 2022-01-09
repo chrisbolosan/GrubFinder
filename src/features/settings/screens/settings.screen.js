@@ -1,5 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import { Text } from "../../../components/typography/text.component";
+import { Spacer } from "../../../components/spacer/spacer.component";
 import { List, Avatar } from "react-native-paper";
 import { SafeArea } from "../../../components/utils/safe-area.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
@@ -7,19 +9,29 @@ import { AuthenticationContext } from "../../../services/authentication/authenti
 const SettingsItem = styled(List.Item)`
   padding: ${(props) => props.theme.space[3]};
 `;
+const AvatarContainer = styled.View`
+  align-items: center;
+  margin-top: ${(props) => props.theme.space[2]};
+`;
 
 export const SettingsScreen = ({ navigation }) => {
-  const { onLogout } = useContext(AuthenticationContext);
+  const { onLogout, user } = useContext(AuthenticationContext);
   return (
     <SafeArea>
-      <Avatar.Image
-        size={100}
-        source={require("../../../../assets/userSettings.webp")}
-      />
+      <Spacer position="top" size="large">
+        <AvatarContainer>
+          <Avatar.Image
+            size={80}
+            source={require("../../../../assets/userSettings.webp")}
+          />
+          <Text variant="label">{user.email}</Text>
+        </AvatarContainer>
+      </Spacer>
+
       <List.Section>
-        <List.Subheader>Settings</List.Subheader>
         <SettingsItem
-          title="Favorites"
+          title="Favourites"
+          description="View your favorites"
           left={(props) => <List.Icon {...props} color="black" icon="heart" />}
           onPress={() => navigation.navigate("Favourites")}
         />
