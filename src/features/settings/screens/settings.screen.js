@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Button } from "react-native";
+
 import { List } from "react-native-paper";
 import { SafeArea } from "../../../components/utils/safe-area.component";
 import { AuthenticationContext } from "../../../services/authentication/authentication.context";
@@ -23,11 +23,6 @@ export const SettingsScreen = ({ navigation }) => {
           onPress={() => onLogout()}
         />
       </List.Section>
-
-      {/* <Text>Settings!</Text> */}
-      {/* <Button title="logout" onPress={() => onLogout()}>
-        Logout
-      </Button> */}
     </SafeArea>
   );
 };
