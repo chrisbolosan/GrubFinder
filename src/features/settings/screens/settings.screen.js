@@ -16,18 +16,18 @@ export const SettingsScreen = ({ navigation }) => {
           onPress={() => navigation.navigate("Favourites")}
         />
         <List.Item
-          title="Logout"
+          title="logout"
           left={(props) => (
             <List.Icon {...props} color="#000" icon="logout-variant" />
           )}
-          onPress={() => navigation.navigate("logout")}
+          onPress={() => onLogout()}
         />
       </List.Section>
 
       {/* <Text>Settings!</Text> */}
-      <Button title="logout" onPress={() => onLogout()}>
+      {/* <Button title="logout" onPress={() => onLogout()}>
         Logout
-      </Button>
+      </Button> */}
     </SafeArea>
   );
 };
