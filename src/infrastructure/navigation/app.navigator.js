@@ -6,6 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 // import { SafeArea } from "../../components/utils/safe-area.component";
 import { RestaurantsNavigator } from "../../infrastructure/navigation/restaurants.navigator";
 import { MapScreen } from "../../features/map/screens/map.screen";
+import { SettingsScreen } from "../../features/settings/screens/settings.screen";
 // import { AuthenticationContext } from "../../services/authentication/authentication.context";
 import { FavouritesContextProvider } from "../../services/favourites/favourites.context";
 import { LocationContextProvider } from "../../services/location/location.context";
@@ -63,7 +64,7 @@ export const AppNavigator = () => {
             <Tab.Screen
               options={{ headerShown: false }}
               name="Settings"
-              component={Settings}
+              component={SettingsScreen}
             />
           </Tab.Navigator>
         </RestaurantsContextProvider>
