@@ -54,6 +54,6 @@ export const FoodLogoWrapper = styled.View`
   width: 80px;
   height: 110px;
   position: absolute;
-  top: 190px;
+  top: 250px;
   padding: ${(props) => props.theme.space[2]};
 `;
