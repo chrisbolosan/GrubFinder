@@ -2,8 +2,9 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { RestaurantsNavigator } from "../../infrastructure/navigation/restaurants.navigator";
+import { SettingsNavigator } from "./settings.navigator";
 import { MapScreen } from "../../features/map/screens/map.screen";
-import { SettingsScreen } from "../../features/settings/screens/settings.screen";
+
 import { FavouritesContextProvider } from "../../services/favourites/favourites.context";
 import { LocationContextProvider } from "../../services/location/location.context";
 import { RestaurantsContextProvider } from "../../services/restaurant/restaurants.context";
@@ -48,7 +49,7 @@ export const AppNavigator = () => {
             <Tab.Screen
               options={{ headerShown: false }}
               name="Settings"
-              component={SettingsScreen}
+              component={SettingsNavigator}
             />
           </Tab.Navigator>
         </RestaurantsContextProvider>

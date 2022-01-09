@@ -17,7 +17,9 @@ export const SettingsScreen = ({ navigation }) => {
         />
         <List.Item
           title="Logout"
-          left={(props) => <List.Icon {...props} color="#000" icon="folder" />}
+          left={(props) => (
+            <List.Icon {...props} color="#000" icon="logout-variant" />
+          )}
           onPress={() => navigation.navigate("logout")}
         />
       </List.Section>
