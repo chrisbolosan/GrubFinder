@@ -49,3 +49,11 @@ export const ErrorContainer = styled.View`
   margin-top: ${(props) => props.theme.space[2]};
   margin-bottom: ${(props) => props.theme.space[1]};
 `;
+
+export const FoodLogoWrapper = styled.View`
+  width: 90px;
+  height: 110px;
+  position: absolute;
+  top: 280px;
+  padding: ${(props) => props.theme.space[2]};
+`;
