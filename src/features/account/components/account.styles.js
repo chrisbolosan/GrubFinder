@@ -51,9 +51,9 @@ export const ErrorContainer = styled.View`
 `;
 
 export const FoodLogoWrapper = styled.View`
-  width: 90px;
+  width: 80px;
   height: 110px;
   position: absolute;
-  top: 280px;
+  top: 250px;
   padding: ${(props) => props.theme.space[2]};
 `;
