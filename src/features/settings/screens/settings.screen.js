@@ -40,7 +40,7 @@ export const SettingsScreen = ({ navigation }) => {
           left={(props) => (
             <List.Icon {...props} color="#000" icon="logout-variant" />
           )}
-          onPress={() => onLogout()}
+          onPress={onLogout}
         />
       </List.Section>
     </SafeArea>
