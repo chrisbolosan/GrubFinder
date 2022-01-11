@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import styled from "styled-components";
 import { SafeArea } from "../../../components/utils/safe-area.component";
 import { Text } from "../../../components/typography/text.component";
+import { FavouritesContext } from "../../../services/favourites/favourites.context";
+
+const FavouritesArea = styled(SafeArea)``;
 
 export const FavouritesScreen = () => {
-  return (
-    <SafeArea>
-      <Text>Favouritesscreen</Text>
-    </SafeArea>
+  const { favourites } = useContext(FavouritesContext);
+  return favourites.length ? null : (
+    <FavouritesArea>
+      <Text>No favourites found.</Text>
+    </FavouritesArea>
   );
 };
